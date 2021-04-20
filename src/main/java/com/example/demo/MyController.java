@@ -28,7 +28,7 @@ public class MyController {
         String link = wishlist.getLinkOfThePresent();
         byte reserved = wishlist.getReseveret();
         String user = wishlist.getUsername();
-        //jbdc.createNewWishlist(name, price, link, reserved, user);
+        jbdc.createNewWishlist(name, price, link, reserved, user);
         Wishlist wishlistForArray = new Wishlist(name,price,link,reserved,user);
         wishes.add(wishlistForArray);
             return "redirect:/wishlist";
