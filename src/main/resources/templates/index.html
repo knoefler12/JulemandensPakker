@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May your dreams come true!</title>
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+</head>
+<body>
+<header th:replace="fragments/header.html"></header>
+<div class="bg-image">
+
+</div>
+<div class="submit-wish">
+<form method="post" th:action="@{/ønske_processing}" th:object="${wishlist}">
+    <label for="navn_på_gaven">Navn på gaven:</label>
+    <input type="text" id="navn_på_gaven" th:field="*{NameOfThePresent}">
+    <label for="pris">prisen på gaven:</label>
+    <input type="text" id="pris" name="pris" th:field="*{Price}">
+    <label for="link_til_gaven">Linket til gaven:</label>
+    <input type="text" id="link_til_gaven" name="link_til_gaven" th:field="*{LinkOfThePresent}">
+    <label for="username">Brugernavn:</label>
+    <input type="text" id="username" name="username" th:field="*{Username}">
+    <input type="submit" value="Make a wish!" class="submit-button">
+</div>
+</form>
+<footer th:replace="fragments/footer.html"></footer>
+</body>
+</html>

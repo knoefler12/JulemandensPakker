@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your wishlist!</title>
+</head>
+<body>
+<header th:replace="fragments/header.html"></header>
+
+<div>
+<ul class="wishes" th:each="wishes: ${wish}">
+<div>
+    <li th:text="${wishes}"></li>
+</div>
+<br/>
+</ul>
+</div>
+<footer th:replace="fragments/footer.html"></footer>
+</body>
+</html>
